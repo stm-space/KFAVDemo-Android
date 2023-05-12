@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onFrameAvailable(KFFrame frame) {
+            Log.e("KFAudioCapture", "onFrameAvailable");
             ///< 获取到音频Buffer数据存储到本地PCM
             try {
                 ByteBuffer pcmData = ((KFBufferFrame)frame).buffer;
